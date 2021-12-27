@@ -346,7 +346,7 @@ footer {
 
   .meme--content-right {
     margin-left: 0;
-    margin-top: 3em;
+    margin-top: 30px;
   }
 
   .meme--text {
@@ -355,6 +355,10 @@ footer {
 
   .meme--text.bottom {
     margin-bottom: 220px;
+  }
+
+  .meme--image {
+    margin-top: -15px;
   }
 }
 
@@ -418,6 +422,14 @@ footer {
     padding: 0.5rem 1rem;
     outline: none;
     transition: all 0.4s;
+  }
+
+  .meme--image {
+    margin-top: -15px;
+  }
+
+  .meme--content-right {
+    margin-top: 30px;
   }
 
   footer {
@@ -484,6 +496,14 @@ footer {
     left: 30px;
     top: 2px;
     font-size: 0.8rem;
+  }
+
+  .meme--image {
+    margin-top: -15px;
+  }
+
+  .meme--content-right {
+    margin-top: 30px;
   }
 
   footer {
