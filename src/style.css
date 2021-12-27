@@ -258,16 +258,18 @@ input:focus {
   content: "🌞";
   position: absolute;
   display: block;
-  right: 45px;
+  right: 40px;
   top: 5px;
+  font-size: 1.1rem;
 }
 
 #toggle::after {
   content: "🌛";
   position: absolute;
   display: block;
-  left: 45px;
+  left: 40px;
   top: 5px;
+  font-size: 1.1rem;
 }
 
 #toggle.active {
