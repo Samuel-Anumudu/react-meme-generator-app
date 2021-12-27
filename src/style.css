@@ -9,10 +9,16 @@ body {
   font-size: 1.3rem;
   font-family: "Karla", sans-serif;
   /* line-height: 1.7; */
+  transition: 0.5s;
+}
+
+body.active {
+  background-color: #000;
 }
 
 img {
-  max-width: 100%;
+  width: 80vw;
+  max-width: 90%;
 }
 
 .header__item--logo {
@@ -23,10 +29,24 @@ img {
 }
 
 header {
-  background: linear-gradient(to right, #672280 0%, #a626d3 100%);
+  /* background: linear-gradient(to right, #672280 0%, #a626d3 100%); */
+  /* background: linear-gradient(
+    89deg,
+    #79a944 50%,
+    rgb(145, 172, 73) 100%,
+    #79a944 100%
+  ); */
+  background-color: #231f20;
   text-align: center;
   color: #fff;
   padding: 1em 0;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+header.active {
+  background-color: #fff;
 }
 
 .header__item--right {
@@ -54,6 +74,10 @@ h5,
 h6 {
   margin: 0;
 }
+
+h1.active {
+  color: #231f20;
+}
 .header__item--title {
   letter-spacing: -1px;
   font-size: 2rem;
@@ -73,17 +97,34 @@ input {
   text-indent: 5px;
   font-size: 1rem;
   font-family: "Karla", sans-serif;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #231f20;
 }
 .right {
   margin-right: 25px;
 }
 
+.form__btn.active {
+  background-color: #fff;
+  color: #231f20;
+}
+
 .form__btn {
   width: 100%;
-  background: linear-gradient(to right, #672280 0%, #a626d3 100%);
+  /* background: linear-gradient(
+    89deg,
+    #79a944 50%,
+    rgb(145, 172, 73) 100%,
+    #79a944 100%
+  ); */
+  background-color: #231f20;
   color: white;
   padding: 20px;
-  margin: 20px 0;
+  margin: 50px 0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -94,6 +135,340 @@ input {
   cursor: pointer;
 }
 
-.form__btn:hover {
+.form__btn:active {
   transform: scale(0.98);
+}
+
+.form__btn:focus,
+.form__btn:active {
+  outline: none;
+  border: none;
+}
+
+.meme {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.meme--content-right {
+  margin-left: auto;
+}
+
+.description--header {
+  margin-top: -6px;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #231f20;
+  transition: 0.5s;
+}
+
+.description--paragraph {
+  margin: 0;
+}
+
+.description--header.active {
+  color: #fff;
+}
+.meme--content-right p {
+  font-size: 1.1rem;
+  max-width: 200px;
+  color: #333;
+}
+
+.description--paragraph.active {
+  color: #fff;
+}
+
+.meme--image {
+  border-radius: 5px;
+}
+
+.download--btn {
+  background-color: #231f20;
+  color: #fff;
+  border: 2px solid #231f20;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  outline: none;
+  transition: all 0.4s;
+  margin-top: 2em;
+}
+
+.download--btn:hover {
+  background-color: transparent;
+  color: #231f20;
+  border: 2px solid #231f20;
+}
+
+.download--btn.active {
+  background-color: #fff;
+  color: #231f20;
+}
+
+.download--btn.active:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 35%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+#toggle {
+  position: relative;
+  margin-left: auto;
+  display: block;
+  width: 70px;
+  height: 35px;
+  border-radius: 160px;
+  background: #4d4d4d;
+  transition: 0.5s;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: inset 0px 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0px 8px 8px rgba(0, 0, 0, 0.1), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+}
+#toggle::before {
+  content: "🌞";
+  position: absolute;
+  display: block;
+  right: 45px;
+  top: 5px;
+}
+
+#toggle::after {
+  content: "🌛";
+  position: absolute;
+  display: block;
+  left: 45px;
+  top: 5px;
+}
+
+#toggle.active {
+  /* background: #fff; */
+  background: #4d4d4d;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px -4px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  /* width: 160px;
+  height: 160px; */
+  /* background: linear-gradient(to bottom, #444, #222); */
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: 0.5s;
+  /* transition: 0.25s; */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0px 4px 4px rgba(225, 225, 225, 0.2),
+    inset 0px -4px 4px rgba(225, 225, 225, 0.2);
+}
+
+/*  
+#toggle .indicator:hover,
+#toggle.active .indicator:hover {
+  box-shadow: 0 0 4px 2px rgb(255, 255, 255);
+}
+
+*/
+
+#toggle.active .indicator {
+  left: 35px;
+  /* background: linear-gradient(to bottom, #eaeaea, #f9f9f9); */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0px 4px 4px rgba(225, 225, 225, 1),
+    inset 0px -4px 4px rgba(225, 225, 225, 1);
+}
+
+.footer--text_thin {
+  font-weight: lighter;
+}
+
+footer {
+  margin-top: 4em;
+  /* background: linear-gradient(
+    89deg,
+    #79a944 50%,
+    rgb(145, 172, 73) 100%,
+    #79a944 100%
+  ); */
+  background-color: #231f20;
+  padding: 5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  img {
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  .meme {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meme--content-right {
+    margin-left: 0;
+    margin-top: 3em;
+  }
+
+  .meme--text {
+    left: 50%;
+  }
+
+  .meme--text.bottom {
+    margin-bottom: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .trollface--logo {
+    width: 40px;
+  }
+
+  .header__item--title {
+    font-size: 1.5rem;
+  }
+
+  #toggle {
+    width: 50px;
+    height: 25px;
+    transition: 0.5s;
+  }
+
+  #toggle .indicator {
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+  }
+
+  #toggle.active .indicator {
+    left: 25px;
+  }
+  #toggle::before {
+    content: "🌞";
+    position: absolute;
+    display: block;
+    right: 27px;
+    top: -1px;
+    font-size: 1.2rem;
+  }
+
+  #toggle::after {
+    content: "🌛";
+    position: absolute;
+    display: block;
+    left: 30px;
+    top: -1px;
+    font-size: 1.2rem;
+  }
+
+  h2.top,
+  h2.bottom {
+    font-size: 2rem;
+  }
+
+  .description--header {
+    font-size: 1.5rem;
+  }
+
+  .meme--content-right p {
+    font-size: 1rem;
+  }
+
+  .download--btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    transition: all 0.4s;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 400px) {
+  .trollface--logo {
+    width: 35px;
+  }
+
+  .header__item--title {
+    font-size: 1.2rem;
+    margin-left: -15px;
+  }
+
+  input {
+    font-size: 0.7rem;
+  }
+
+  .form__btn {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  h2.top,
+  h2.bottom {
+    font-size: 1.2rem;
+  }
+
+  .meme--text.bottom {
+    margin-bottom: 200px;
+  }
+
+  .description--header {
+    font-size: 1.2rem;
+  }
+
+  .meme--content-right p {
+    font-size: 0.8rem;
+  }
+
+  .download--btn {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.9rem;
+    outline: none;
+    transition: all 0.4s;
+  }
+
+  footer {
+    font-size: 0.6em;
+  }
 }
