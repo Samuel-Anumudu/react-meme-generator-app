@@ -349,6 +349,11 @@ footer {
     margin-top: 35px;
   }
 
+  #toggle::before,
+  #toggle::after {
+    content: " ";
+  }
+
   .meme--text {
     left: 50%;
   }
@@ -386,22 +391,10 @@ footer {
   #toggle.active .indicator {
     left: 25px;
   }
-  #toggle::before {
-    content: "🌞";
-    position: absolute;
-    display: block;
-    right: 27px;
-    top: -1px;
-    font-size: 1.2rem;
-  }
 
+  #toggle::before,
   #toggle::after {
-    content: "🌛";
-    position: absolute;
-    display: block;
-    left: 30px;
-    top: -1px;
-    font-size: 1.2rem;
+    content: " ";
   }
 
   h2.top,
@@ -484,22 +477,9 @@ footer {
     transition: all 0.4s;
   }
 
-  #toggle::before {
-    content: "🌞";
-    position: absolute;
-    display: block;
-    right: 33px;
-    top: 5px;
-    font-size: 0.6rem;
-  }
-
+  #toggle::before,
   #toggle::after {
-    content: "🌛";
-    position: absolute;
-    display: block;
-    left: 35px;
-    top: 5px;
-    font-size: 0.6rem;
+    content: " ";
   }
 
   .meme--image {
