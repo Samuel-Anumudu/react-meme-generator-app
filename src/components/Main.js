@@ -71,7 +71,7 @@ const Main = () => {
         />
       </div>
       <button onClick={getMemeImage} className="form__btn">
-        Get a new meme image 😉
+        Get a new meme image
       </button>
       <div className="meme">
         <div className="meme--content-left">

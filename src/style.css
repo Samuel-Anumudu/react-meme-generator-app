@@ -436,7 +436,7 @@ footer {
   }
 
   input {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .form__btn {
@@ -468,7 +468,26 @@ footer {
     transition: all 0.4s;
   }
 
+  #toggle::before {
+    content: "🌞";
+    position: absolute;
+    display: block;
+    right: 27px;
+    top: 2px;
+    font-size: 0.8rem;
+  }
+
+  #toggle::after {
+    content: "🌛";
+    position: absolute;
+    display: block;
+    left: 30px;
+    top: 2px;
+    font-size: 0.8rem;
+  }
+
   footer {
     font-size: 0.6em;
+    padding: 3em;
   }
 }
